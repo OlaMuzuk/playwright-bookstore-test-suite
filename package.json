@@ -1,0 +1,16 @@
+{
+  "name": "bookstore-test-suite",
+  "version": "1.0.0",
+  "description": "Automated test suite for the Book Store application using Playwright",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.50.1"
+  },
+  "scripts": {
+    "start": "npx playwright test",
+    "test": "npx playwright test",
+    "report": "npx playwright show-report"
+  }
+}
