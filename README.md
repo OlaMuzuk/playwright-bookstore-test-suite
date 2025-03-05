@@ -1,9 +1,11 @@
 # Book Store Test Suite with Playwright
 
-This test suite automates testing for the Book Store application on [https://demoqa.com/books](https://demoqa.com/books) using Playwright. The suite includes features such as error handling, screenshots, JSON test data management, and parallel execution.
+This test suite automates testing for the Book Store application on https://demoqa.com/books using Playwright. The suite includes both positive and negative test scenarios, error handling, screenshots, JSON test data management, and parallel execution.
 
 ## Features
-- Automated book search, add to collection, verification, and deletion tests
+- Automated positive and negative test scenarios:
+  - Positive Tests: Book search, add to collection, verification, and deletion
+  - Negative Tests: Invalid login, invalid search, unauthorized actions
 - Error handling with try-catch and screenshot capture on failure
 - JSON file management for test data
 - Parallel test execution
@@ -14,40 +16,51 @@ This test suite automates testing for the Book Store application on [https://dem
 
 ## Installation
 1. Clone this repository:
-```bash
-git clone <your-repo-url>
-```
-2. Navigate to the project directory:
-```bash
-cd bookstore-test-suite
-```
+
+git clone https://github.com/OlaMuzuk/playwright-bookstore-test-suite.git  
+
+
 3. Install dependencies:
-```bash
+
 npm install
-```
+
 
 ## Running Tests
 Run all tests in parallel with Playwright:
-```bash
+
 npx playwright test
-```
+
+Run Tests in Specific Browser:
+npx playwright test --project=chromium
+npx playwright test --project=firefox
+npx playwright test --project=webkit
 
 ## Test Data
 Test data is managed using `testData.json` file. Update this file with valid credentials:
-```json
-{
-    "username": "your_username",
-    "password": "your_password"
+
+{  
+    "username": "your_username",  
+    "password": "your_password",  
+    "invalidUsername": "invalid_user",  
+    "invalidPassword": "invalid_pass",  
+    "nonExistentBook": "NonExistentBook"  
 }
-```
+
 
 ## Screenshots
 Screenshots of errors are saved in the `screenshots/` directory for debugging purposes.
 
 ## Test Reports
 After execution, view the report using:
-```bash
+
 npx playwright show-report
-```
+
+## Git Commands
+git init
+git add .
+git commit -m "Initial commit of Book Store Test Suite"
+git remote add origin https://github.com/OlaMuzuk/playwright-bookstore-test-suite.git
+git push -u origin main
+
 
 

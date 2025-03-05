@@ -4,12 +4,12 @@ const { defineConfig } = require('@playwright/test');
 module.exports = defineConfig({
     use: {
         headless: true,
-        screenshot: 'on',
-        trace: 'on',
+        screenshot: 'only-on-failure', // Capture screenshots only when a test fails
+        trace: 'retain-on-failure', // Retain trace files for failed tests
     },
-    retries: 1,
+    retries: 2, // Retry failed tests twice before considering them as failed
     workers: 4, // Enable parallel execution with 4 workers
-    reporter: [['list'], ['html', { outputFolder: 'report' }]],
+    reporter: [['list'], ['html', { outputFolder: 'report' }]], // Output report configuration
     outputDir: 'screenshots',
     projects: [
         {
@@ -25,4 +25,5 @@ module.exports = defineConfig({
             use: { browserName: 'webkit' },
         }
     ],
+    
 });
