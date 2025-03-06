@@ -1,11 +1,10 @@
 # Book Store Test Suite with Playwright
 
-This test suite automates testing for the Book Store application on https://demoqa.com/books using Playwright. The suite includes both positive and negative test scenarios, error handling, screenshots, JSON test data management, and parallel execution.
+This test suite automates testing for the Book Store application on https://demoqa.com/books using Playwright. The suite includes both positive scenarios, error handling, screenshots, JSON test data management, and parallel execution.
 
 ## Features
 - Automated positive and negative test scenarios:
-  - Positive Tests: Book search, add to collection, verification, and deletion
-  - Negative Tests: Invalid login, invalid search, unauthorized actions
+   - Book search, add to collection, verification, and deletion
 - Error handling with try-catch and screenshot capture on failure
 - JSON file management for test data
 - Parallel test execution
@@ -40,10 +39,7 @@ Test data is managed using `testData.json` file. Update this file with valid cre
 
 {  
     "username": "your_username",  
-    "password": "your_password",  
-    "invalidUsername": "invalid_user",  
-    "invalidPassword": "invalid_pass",  
-    "nonExistentBook": "NonExistentBook"  
+    "password": "your_password"
 }
 
 
