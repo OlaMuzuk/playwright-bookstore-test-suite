@@ -17,7 +17,7 @@ This test suite automates testing for the Book Store application on https://demo
 1. Clone this repository:
 
 git clone https://github.com/OlaMuzuk/playwright-bookstore-test-suite.git  
-
+cd playwright-bookstore-test-suite
 
 3. Install dependencies:
 
@@ -29,7 +29,19 @@ Run all tests in parallel with Playwright:
 
 npx playwright test
 
-Run Tests in Specific Browser:
+### Run Tests in Headed Mode
+
+npx playwright test --headed
+
+### Run a Specific Test
+
+npx playwright test tests/bookStore.spec.ts
+
+### Parallel Execution
+
+workers: 4,
+
+### Run Tests in Specific Browser:
 npx playwright test --project=chromium
 npx playwright test --project=firefox
 npx playwright test --project=webkit
@@ -38,8 +50,8 @@ npx playwright test --project=webkit
 Test data is managed using `testData.json` file. Update this file with valid credentials:
 
 {  
-    "username": "your_username",  
-    "password": "your_password"
+    "username": "testUser123",  
+    "password": "Test123!"
 }
 
 
